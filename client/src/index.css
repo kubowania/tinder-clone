@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700;800&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.primary-title {
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+}
+
+.primary-button {
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover {
+    background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+}
+
+.secondary-button {
+    color: rgb(121, 119, 119);
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px rgb(121, 119, 119);
+    margin: 6px;
+}
+
+.secondary-button:hover {
+    color: rgb(48, 48, 48);
+    border: solid 2px rgb(48, 48, 48);
+}
+
+
+/*-------- Navbar --------*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-button {
+    color: rgb(254, 48, 114);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
+nav .nav-button:disabled {
+    background-color: rgb(181, 180, 180);
+    color: rgb(189, 42, 90);
+}
+
+nav .logo-container {
+    width: 170px;
+    margin: 15px;
+}
+
+nav .logo-container .logo {
+    width: 100%;
+}
+
+/*-------- Home page --------*/
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ), url('images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+.home {
+    margin-top: 30vh;
+}
+
+/*-------- Auth Modal --------*/
+.auth-modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.auth-modal .close-icon {
+    float: right;
+}
+
+.auth-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+    padding: 8px;
+    margin: 8px;
+    font-size: 17px;
+}
+
+/*-------- OnBoarding Page --------*/
+.onboarding {
+    border-top: solid 1px rgb(213, 213, 213);
+}
+
+.onboarding form {
+    display: flex;
+    justify-content: center;
+}
+
+.onboarding form section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 35%;
+    text-align: start;
+}
+
+.onboarding form input {
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+.onboarding form label {
+    margin: 10px 0;
+}
+
+.onboarding form .multiple-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.onboarding form .multiple-input-container input {
+    margin-right: 10px;
+}
+
+.onboarding form .multiple-input-container label {
+    padding: 10px;
+    border: solid 2px rgb(144, 144, 144);
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.onboarding form input[type=radio] {
+    display: none;
+}
+
+.onboarding form input[type=number] {
+    width: 10%;
+}
+
+.onboarding form input[type=radio]:checked + label {
+    border: solid 2px rgb(221, 39, 22);
+}
+
+.onboarding form input[type=submit]:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.onboarding form input[type=submit]:active {
+    background-color: rgb(226, 115, 115);
+}
+
+.onboarding form .photo-container img {
+    width: 100%
+}
+
+/*-------- Dashboard  --------*/
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swipe {
+    position: absolute;
+}
+
+.dashboard .card-container {
+    width: 400px;
+    height: 650px;
+}
+
+.card {
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.dashboard .swipe-info {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+/*-------- Chat Container --------*/
+.chat-container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+}
+
+.chat-container .chat-container-header {
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container .option {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 4px rgb(243, 33, 33);
+    font-size: 20px;
+    margin: 2px;
+    padding: 10px;
+}
+
+.chat-container .option:disabled {
+    border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.chat-container .profile,
+.chat-container .log-out-icon {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.img-container {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+/*-------- Chat Display --------*/
+.chat-display,
+.matches-display {
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+/*-------- Chat Input --------*/
+.chat-input {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
